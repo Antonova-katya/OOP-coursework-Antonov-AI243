@@ -1,0 +1,1011 @@
+{
+  "info": {
+    "_postman_id": "e4107019-4981-4605-a1b7-41f956efefa2",
+    "name": "coursework-ai-243-antonova",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54325704",
+    "_collection_link": "https://go.postman.co/collection/54325704-e4107019-4981-4605-a1b7-41f956efefa2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Instructor",
+      "item": [
+        {
+          "name": "Створити нового викладача",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": \"null\", \r\n    \"firstName\": \"Olena\", \r\n    \"lastName\": \"Ivanenko\", \r\n    \"email\": \"olena.ivanenko@op.edu.ua\", \r\n    \"specialization\": \"Java та Spring Boot\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/instructors",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "instructors"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати список викладачів",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/instructors",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "instructors"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати інформацію про викладача",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/instructors/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "instructors",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Оновити дані викладача",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": 0, \r\n    \"firstName\": \"Olena\", \r\n    \"lastName\": \"Shevchenko\", \r\n    \"email\": \"olena.shevchenko@op.edu.ua\", \r\n    \"specialization\": \"Backend розробка\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/instructors/6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "instructors",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Видалити викладача",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/instructors/7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "instructors",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати курси викладача",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/instructors/1/courses",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "instructors",
+                "1",
+                "courses"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Course",
+      "item": [
+        {
+          "name": "Створити новий курс",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": null,\r\n    \"title\": \"Java для початківців\", \r\n    \"description\": \"Повний вступний курс з Java, ООП, колекціями та базовими принципами Spring.\", \r\n    \"level\": \"BEGINNER\", \r\n    \"createdDate\": \"2026-06-12\", \r\n    \"instructorId\": 1\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/courses",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "courses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати список курсів",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/courses",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "courses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати інформацію про курс",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/courses/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "courses",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Оновити дані курсу",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"id\": \"0\", \r\n\"title\": \"Java Core та Spring Boot\", \r\n\"description\": \"Курс охоплює Java Core, принципи ООП, JPA та створення REST API.\", \r\n\"level\": \"INTERMEDIATE\", \r\n\"createdDate\": \"2026-06-12\", \r\n\"instructorId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/courses/6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "courses",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Видалити курс",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/courses/6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "courses",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати курси викладача",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/courses/instructor/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "courses",
+                "instructor",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати модулі курсу",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/courses/1/modules",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "courses",
+                "1",
+                "modules"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати студентів курсу",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/courses/1/students",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "courses",
+                "1",
+                "students"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Student",
+      "item": [
+        {
+          "name": "Зареєструвати нового студента",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\": null,\r\n    \"firstName\": \"Ivan\", \r\n    \"lastName\": \"Petrenko\", \r\n    \"email\": \"ivan.petrenko@op.edu.ua\", \r\n    \"registrationDate\": \"2026-06-12\"\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/students",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати список студентів",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/students",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати інформацію про студента",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/students/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Оновити дані студента",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"id\": \"0\", \r\n\"firstName\": \"Ivan\", \r\n\"lastName\": \"Koval\", \r\n\"email\": \"ivan.koval@op.edu.ua\", \r\n\"registrationDate\": \"2026-06-12\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/students/6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Видалити студента",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/students/6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати курси студента",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/students/4/courses",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "students",
+                "4",
+                "courses"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Enrollment",
+      "item": [
+        {
+          "name": "Записати студента на курс",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n    \"id\": null,\r\n    \"enrollmentDate\": \"2026-05-12\",\r\n    \"completionDate\": \"2026-06-28\",\r\n    \"progress\": 60,\r\n    \"studentId\": 3,\r\n    \"courseId\": 5\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/enrollments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "enrollments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати список записів",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/enrollments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "enrollments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати інформацію про запис",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/enrollments/5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "enrollments",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Оновити прогрес навчання",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"progress\": 80\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/enrollments/6/progress",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "enrollments",
+                "6",
+                "progress"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Скасувати запис на курс",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/enrollments/6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "enrollments",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Module",
+      "item": [
+        {
+          "name": "Створити новий модуль",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "  {\r\n    \"id\": null,\r\n    \"title\": \"Основи Spring Boot\",\r\n    \"description\": \"Створення REST API, контролери, сервіси та репозиторії.\",\r\n    \"orderIndex\": 3,\r\n    \"courseId\": 1\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/modules",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "modules"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати список модулів",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/modules",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "modules"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Отримати інформацію про модуль",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/modules/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "modules",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Оновити модуль",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"id\": \"0\", \r\n\"title\": \"Робота з базою даних\",\r\n\"description\": \"Вивчення Spring Data JPA, репозиторіїв та зв’язків між сутностями.\",\r\n\"orderIndex\": 3,\r\n\"courseId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/modules/7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "modules",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Скасувати запис на курс",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/enrollments/5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "enrollments",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Додати модуль до курсу",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/courses/3/modules/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "courses",
+                "3",
+                "modules",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Видалити модуль з курсу",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/courses/1/modules/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "courses",
+                "1",
+                "modules",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "item": [
+        {
+          "name": "Пошук курсів за назвою або описом",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Розширений пошук курсів",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/search/courses/advanced?query=&level=BEGINNER",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "search",
+                "courses",
+                "advanced"
+              ],
+              "query": [
+                {
+                  "key": "query",
+                  "value": ""
+                },
+                {
+                  "key": "level",
+                  "value": "BEGINNER"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Пошук студентів",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/search/students?query=Anna",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "search",
+                "students"
+              ],
+              "query": [
+                {
+                  "key": "query",
+                  "value": "Anna"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Analytics",
+      "item": [
+        {
+          "name": "Загальна кількість курсів",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/analytics/courses/count",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "analytics",
+                "courses",
+                "count"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Кількість студентів",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/analytics/students/count",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "analytics",
+                "students",
+                "count"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Кількість активних записів",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/analytics/enrollments/active",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "analytics",
+                "enrollments",
+                "active"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Кількість завершених курсів",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/analytics/enrollments/completed",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "analytics",
+                "enrollments",
+                "completed"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Кількість курсів за рівнем",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/analytics/courses/by-level",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "analytics",
+                "courses",
+                "by-level"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Actuator",
+      "item": [
+        {
+          "name": "Перевірка стану сервісу",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/actuator/health",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "actuator",
+                "health"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Список доступних метрик",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/actuator/metrics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "actuator",
+                "metrics"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Метрики для систем моніторингу",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/actuator/prometheus",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "actuator",
+                "prometheus"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
